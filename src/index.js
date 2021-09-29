@@ -21,7 +21,7 @@
 // -------------------------- 1. Концепция №1 : react-элементы --------------------------
 // import React from 'react';
 import ReactDOM from 'react-dom'; //это библиотека для рендера react-элементов
-import paintings from '../src/paintings.json'; // импортируем json-файл с данными (для примера динаммического изменения данных)
+
 
 import App from './App';
 
@@ -76,7 +76,7 @@ const data = {
 
  
  
-const painting = paintings[2]; 
+// const painting = paintings[2]; 
 
 // ReactDOM.render(<Painting
 //     url={painting.url}
