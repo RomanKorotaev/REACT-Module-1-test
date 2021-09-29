@@ -9,7 +9,8 @@ function Painting(props) {
         title,
         authorUrl,
         authorName = 'не известно',
-        price } = props;
+        price,
+        quantity} = props;
     return (<div>
         <img src={ imageUrl} alt={title} width="480" />
         <h2>{title}</h2>
@@ -17,7 +18,9 @@ function Painting(props) {
             Автор: <a href={authorUrl}>{authorName}</a>
         </p>
         <p>Цена: {price}  кредитов</p>
-        <p>Доступность:  заканчивается или есть в наличии </p>
+        
+        //Пример рендеринга по условию
+         <p>Доступность:  { quantity < 10 ? 'заканчивается' : 'есть в наличии' } </p>
         <button type="button">Добавить в корзину</button>
     </div >
     );
@@ -30,7 +33,8 @@ Painting.propTypes = {
     title: PropTypes.string,
     authorUrl: PropTypes.string,
     authorName: PropTypes.string,
-    price:PropTypes.number,
+    price: PropTypes.number,
+    quantity:PropTypes.number
 }
 
 export default Painting

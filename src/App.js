@@ -8,8 +8,9 @@ export default function App() {
             title={paintings[0].title}
             authorName={paintings[0].author.tag}
             authorUrl={paintings[0].author.url}
-            price={paintings[0].price}
             // price="101dgdfgd"
+            price={paintings[0].price}
+            quantity={paintings[0].quantity }
         />
 
          <Painting
@@ -18,6 +19,7 @@ export default function App() {
             authorName={paintings[1].author.tag}
             authorUrl={paintings[1].author.url}
             price={paintings[1].price}
+            quantity={paintings[1].quantity }
         />
 
          <Painting
@@ -26,7 +28,27 @@ export default function App() {
             authorName={paintings[2].author.tag}
             authorUrl={paintings[2].author.url}
             price={paintings[2].price}
+            quantity={paintings[2].quantity }
         />
     </div>
     );
 }
+
+
+//  ---------------------------Start  3. Рендеринг по условию  ---------------------------
+
+// export default function App() {
+//     const isOnline1 =true;
+//     const isOnline1 =false;
+
+//     return (<div>
+//         {isOnline1 && 'Online! '}  
+
+//          {isOnline2 ? 'Online!' : 'Offline!'} 
+       
+//     </div>
+//     );
+// }
+
+
+//  ---------------------------End  3. Рендеринг по условию  ---------------------------
