@@ -9,6 +9,7 @@ export default function App() {
             authorName={paintings[0].author.tag}
             authorUrl={paintings[0].author.url}
             price={paintings[0].price}
+            // price="101dgdfgd"
         />
 
          <Painting

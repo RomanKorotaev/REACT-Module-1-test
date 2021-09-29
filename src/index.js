@@ -19,7 +19,7 @@
 //  ==============================================
 
 // -------------------------- 1. Концепция №1 : react-элементы --------------------------
-// import React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom'; //это библиотека для рендера react-элементов
 
 
@@ -58,17 +58,17 @@ console.log("jsxElement : ", jsxElement);
 
 // import paintings from '../src/paintings.json'; // импортируем json-файл с данными (для примера динаммического изменения данных)
 
-const data = {
-    "id": "id-1",
-    "url": "https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg",
-    "title": "Feathers. Art abstract",
-    "price": 500,
-    "author": {
-        "tag": "ractapopulous",
-        "url": "https://pixabay.com/users/ractapopulous-24766/"
-    },
-    "quantity": 10
-};
+// const data = {
+//     "id": "id-1",
+//     "url": "https://cdn.pixabay.com/photo/2017/07/31/22/05/feathers-2561511_1280.jpg",
+//     "title": "Feathers. Art abstract",
+//     "price": 500,
+//     "author": {
+//         "tag": "ractapopulous",
+//         "url": "https://pixabay.com/users/ractapopulous-24766/"
+//     },
+//     "quantity": 10
+// };
 
 
 
@@ -88,5 +88,17 @@ const data = {
 //     document.querySelector('#root')
 // );
 
- ReactDOM.render(<App />, document.querySelector('#root')
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App2 />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+
+ ReactDOM.render(
+     <React.StrictMode>
+     <App />
+     </React.StrictMode>,
+     document.querySelector('#root')
  );
