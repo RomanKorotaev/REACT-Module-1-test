@@ -37,18 +37,43 @@ export default function App() {
 
 //  ---------------------------Start  3. Рендеринг по условию  ---------------------------
 
-// export default function App() {
-//     const isOnline1 =true;
-//     const isOnline1 =false;
+export function App3() {
+    const isOnline1 =true;
+    const isOnline2 =true;
 
-//     return (<div>
-//         {isOnline1 && 'Online! '}  
-
-//          {isOnline2 ? 'Online!' : 'Offline!'} 
-       
-//     </div>
-//     );
-// }
-
+    return (<div>
+        <span>Это пример рендериинга по условию в React: </span>
+        <br></br>
+        {isOnline1 && 'Online! '}  
+         {isOnline2 ? 'Online!' : 'Offline!'}  
+    </div>
+    );
+}
 
 //  ---------------------------End  3. Рендеринг по условию  ---------------------------
+
+
+//  ---------------------------Start  4. Рендеринг коллекции  ---------------------------
+export function App4_collection() {
+   
+    return (<div>
+        <span>Так в React рендерится коллекция: </span> 
+
+        {[1, 2, 3, 4, 5].map(el => (<div>{el}</div>))}
+        
+        {paintings.map(painting =>
+             <Painting
+                imageUrl={painting.url}
+                title={painting.title}
+                authorName={painting.author.tag}
+                authorUrl={painting.author.url}
+                price={painting.price}
+                quantity={painting.quantity }
+            />
+            )}
+        
+        </div>
+    );
+}
+
+//  ---------------------------Start  4. Рендеринг коллекции  ---------------------------

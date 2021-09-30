@@ -1,7 +1,7 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
-// import App2 from './App2';
+ import App2 from './App2';
 // import reportWebVitals from './reportWebVitals';
 
 // ReactDOM.render(
@@ -24,7 +24,8 @@ import ReactDOM from 'react-dom'; //это библиотека для ренд�
 
 
 import App from './App';
-
+import {App3} from './App';
+import { App4_collection } from './App';
 // const elem1 = React.createElement('span', { children: 'ПРИВЕТ' });
 // const elem2 = React.createElement('span', {children: 'МИР!'})
 
@@ -96,9 +97,28 @@ console.log("jsxElement : ", jsxElement);
 // );
 
 
+//  ReactDOM.render(
+//      <React.StrictMode>
+//      <App />
+//      </React.StrictMode>,
+//      document.querySelector('#root')
+//  );
+
+
+//  // Пример рендеринга по условию (исходный элемент App3 лежит в App.js)
+//   ReactDOM.render(
+//      <React.StrictMode>
+//      <App3 />
+//      </React.StrictMode>,
+//      document.querySelector('#root')
+// );
+ 
+
+// Пример рендеринга коллекции (исходный элемент App3 лежит в App.js)
  ReactDOM.render(
      <React.StrictMode>
-     <App />
+     <App4_collection />
      </React.StrictMode>,
      document.querySelector('#root')
- );
+);
+ 
