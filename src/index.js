@@ -25,7 +25,8 @@ import ReactDOM from 'react-dom'; //это библиотека для ренд�
 
 import App from './App';
 import {App3} from './App';
-import { App4_collection } from './App';
+import {App4_collection } from './App';
+import {AppRenderList} from './App';
 // const elem1 = React.createElement('span', { children: 'ПРИВЕТ' });
 // const elem2 = React.createElement('span', {children: 'МИР!'})
 
@@ -71,12 +72,9 @@ console.log("jsxElement : ", jsxElement);
 //     "quantity": 10
 // };
 
-
-
 // ReactDOM.render(painting, document.querySelector('#root'))
 
- 
- 
+  
 // const painting = paintings[2]; 
 
 // ReactDOM.render(<Painting
@@ -114,11 +112,21 @@ console.log("jsxElement : ", jsxElement);
 // );
  
 
+// // Пример рендеринга коллекции (исходный элемент App3 лежит в App.js)
+//  ReactDOM.render(
+//      <React.StrictMode>
+//      <App4_collection />
+//      </React.StrictMode>,
+//      document.querySelector('#root')
+// );
+
+
 // Пример рендеринга коллекции (исходный элемент App3 лежит в App.js)
  ReactDOM.render(
      <React.StrictMode>
-     <App4_collection />
+     <AppRenderList />
      </React.StrictMode>,
      document.querySelector('#root')
 );
+ 
  

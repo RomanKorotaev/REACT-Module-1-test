@@ -1,5 +1,7 @@
-import Painting from './components/Painting'
+ import Painting from './components/Painting'
 import paintings from './paintings.json'; // импортируем json-файл с данными (для примера динаммического изменения данных)
+import PaintingList from './components/PaintingList'
+
 
 export default function App() {
     return ( <div>
@@ -62,7 +64,8 @@ export function App4_collection() {
         {[1, 2, 3, 4, 5].map(el => (<div>{el}</div>))}
         
         {paintings.map(painting =>
-             <Painting
+            <Painting
+                key={ painting.id}
                 imageUrl={painting.url}
                 title={painting.title}
                 authorName={painting.author.tag}
@@ -76,4 +79,19 @@ export function App4_collection() {
     );
 }
 
-//  ---------------------------Start  4. Рендеринг коллекции  ---------------------------
+//  ---------------------------End  4. Рендеринг коллекции  ---------------------------
+
+
+//  ---------------------------Start  5. Рендеринг коллекции через отдельный компонент с айдишником (который в React DevTools отображается как ключ key)  ---------------------------
+
+//Это функция рендеринга массива карточек. Вызываем функцию PaintingList, которой в пропсах передаём массив с исходными данными из json файла
+export function AppRenderList() {
+    return (
+        <dev>
+            <PaintingList items={paintings} />
+        </dev>
+    );
+}
+
+
+//  ---------------------------End  5. Рендеринг коллекции через отдельный компонент с айдишником (который в React DevTools отображается как ключ key)  ---------------------------
