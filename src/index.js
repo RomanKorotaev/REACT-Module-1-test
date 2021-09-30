@@ -26,7 +26,10 @@ import ReactDOM from 'react-dom'; //это библиотека для ренд�
 import App from './App';
 import {App3} from './App';
 import {App4_collection } from './App';
-import {AppRenderList} from './App';
+import { AppRenderList } from './App';
+
+import { AppSection } from './App'
+import {AppSection2} from './App'
 // const elem1 = React.createElement('span', { children: 'ПРИВЕТ' });
 // const elem2 = React.createElement('span', {children: 'МИР!'})
 
@@ -128,5 +131,23 @@ console.log("jsxElement : ", jsxElement);
      </React.StrictMode>,
      document.querySelector('#root')
 );
- 
- 
+
+//  ---------------------------Start  6. Секции  ---------------------------
+
+ ReactDOM.render(
+     <React.StrictMode>
+     <AppSection />
+     </React.StrictMode>,
+     document.querySelector('#root')
+);
+
+//     --------------- А это пример рендеринга Композиции ("ёлка" из вложенных один в один компонентов. Не забывать указывать прос с чилдреном)
+ ReactDOM.render(
+     <React.StrictMode>
+     <AppSection2 />
+     </React.StrictMode>,
+     document.querySelector('#root')
+);
+
+
+ //  ---------------------------End  6. Секции  ---------------------------

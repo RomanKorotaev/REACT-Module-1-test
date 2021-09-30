@@ -1,4 +1,4 @@
-import PropTypes from '../../node_modules/prop-types';
+import PropTypes from 'prop-types';
 import defaultImage from './default.jpg';
 
 //  Это пример react-компонента. По факту это функция, котрая возвращает нам разметку (родительский тег)
@@ -17,9 +17,8 @@ function Painting(props) {
         <p>
             Автор: <a href={authorUrl}>{authorName}</a>
         </p>
-        <p>Цена: {price}  кредитов</p>
-        
-        //Пример рендеринга по условию
+        <p>Цена: {price}  кредитов</p>   
+        {/* Пример рендеринга по условию */}
          <p>Доступность:  { quantity < 10 ? 'заканчивается' : 'есть в наличии' } </p>
         <button type="button">Добавить в корзину</button>
     </div >

@@ -1,6 +1,9 @@
- import Painting from './components/Painting'
+
 import paintings from './paintings.json'; // импортируем json-файл с данными (для примера динаммического изменения данных)
+import Painting from './components/Painting'
 import PaintingList from './components/PaintingList'
+
+import Section from './components/Section'
 
 
 export default function App() {
@@ -95,3 +98,36 @@ export function AppRenderList() {
 
 
 //  ---------------------------End  5. Рендеринг коллекции через отдельный компонент с айдишником (который в React DevTools отображается как ключ key)  ---------------------------
+
+
+
+//  ---------------------------Start  6. Секции  ---------------------------
+export function AppSection() {
+    return (
+        <dev>
+            {/* <PaintingList items={paintings} /> */}
+            <Section title="Топ недели" />
+            <Section  />
+        </dev>
+    );
+}
+
+
+// Такая "ёлка" из вложенных компотентов, которые помещаются  как "дети" (а именно prop: children)
+// называется Композиция
+export function AppSection2() {
+    return (
+        <dev>
+            {/* <PaintingList items={paintings} /> */}
+            <Section title="Топ недели (Пример рендеринга Композиции)" >
+                <PaintingList items={paintings} />
+                </Section>
+                
+            <Section title="Лучшее (Пример рендеринга Композиции)">
+                <PaintingList items={paintings} />
+            </Section>
+        </dev>
+    );
+}
+
+//  ---------------------------End  6. Секции   ---------------------------
